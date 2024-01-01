@@ -1,0 +1,44 @@
+<div class="content-heading">
+    <div>
+        Weather forecast
+        <small>This component demonstrates fetching data from the server using sample data.</small>
+    </div>
+    <div class="ml-auto">
+        <button (click)="reload()" type="button" class="btn btn-info">Reload</button>
+    </div>
+</div>
+<div style="height: 300px">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 100px">Date</th>
+                <th style="width: 100px">Temp. (C)</th>
+                <th style="width: 100px">Temp. (F)</th>
+                <th style="width: 100px">Summary</th>
+            </tr>
+        </thead>
+        <tbody  *ngIf="forecasts">
+            <tr *ngFor="let forecast of forecasts">
+                <td>{{ forecast.dateFormatted }}</td>
+                <td>{{ forecast.temperatureC }}</td>
+                <td>{{ forecast.temperatureF }}</td>
+                <td>{{ forecast.summary }}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="!forecasts">
+            <tr>
+                <td colspan="4" class="text-center"><em>Loading...</em></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ul>
+    <li>A C# controller is associated to a specific route.</li>
+    <li>It generates random values to be returned on each api call.</li>
+    <li>An Angular component uses HttpClient service to perform api calls.</li>
+    <li>
+        The controller defines a class and the component defines an interface, both with the same
+        structure so they can communicate easily.
+    </li>
+</ul>

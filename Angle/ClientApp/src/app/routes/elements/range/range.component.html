@@ -1,0 +1,29 @@
+<div class="col-md-3">
+  <div class='range-slider'>
+    <input type="number"
+           [min]="minValue"
+           [max]="maxValue"
+           step="1"
+           [(ngModel)]="RangeMinValue"
+           (ngModelChange)="minValueChange()">
+    <input type="number"
+           [min]="minValue"
+           [max]="maxValue"
+           step="1"
+           [(ngModel)]="RangeMaxValue"
+           (ngModelChange)="maxValueChange()">
+
+    <input type="range"
+           [min]="minValue"
+           [max]="maxValue "
+           step="1"
+           [(ngModel)]="RangeMinValue"
+           (ngModelChange)="minValueChange()">
+    <input type="range"
+           [min]="minValue "
+           [max]="maxValue"
+           step="1"
+           [(ngModel)]="RangeMaxValue"
+           (ngModelChange)="maxValueChange()">
+  </div>
+</div>
